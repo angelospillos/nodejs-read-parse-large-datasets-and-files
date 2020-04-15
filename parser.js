@@ -12,11 +12,38 @@ async function parse(file) {
         let characterCount = 0;
         let word = "";
         while (characterCount < line.length) {
-          if (line[characterCount] === " ") {
-            uniqueWords.add(word);
-            word = "";
-          } else {
-            word += line[characterCount];
+          switch (line[characterCount]) {
+            case "a":
+            case "b":
+            case "c":
+            case "d":
+            case "e":
+            case "f":
+            case "g":
+            case "h":
+            case "i":
+            case "j":
+            case "k":
+            case "l":
+            case "m":
+            case "n":
+            case "o":
+            case "p":
+            case "q":
+            case "r":
+            case "s":
+            case "t":
+            case "u":
+            case "v":
+            case "w":
+            case "x":
+            case "y":
+            case "z":
+              word += line[characterCount];
+              break;
+            default:
+              uniqueWords.add(word);
+              word = "";
           }
           characterCount += 1;
         }
