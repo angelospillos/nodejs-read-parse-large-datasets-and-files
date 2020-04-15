@@ -47,6 +47,7 @@ async function parse(file) {
           }
           characterCount += 1;
         }
+        uniqueWords.add(word);
         lineNumber += 1;
         stream.resume();
       })
